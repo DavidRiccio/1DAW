@@ -1,0 +1,227 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/inicio.jpg');
+    background-color: rgba(24, 16, 0, 0.827);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Sección Inicio */
+#inicio {
+    border-radius: 50%;
+}
+
+#home img:hover {
+    border-radius: 0%;
+}
+
+#foto-galeria {
+    border-radius: 25%;
+}
+
+/* Header y Navegación */
+header {
+    background-color: rgba(21, 0, 24, 0.651);
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+main {
+    padding: 20px;
+    background-color: rgba(21, 0, 24, 0.644);
+}
+
+main section {
+    margin-bottom: 40px;
+}
+
+main h2 {
+    border-bottom: 2px solid #530580;
+    padding-bottom: 10px;
+}
+
+/* Sección Sobre Nosotros */
+.about-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.about-img {
+    max-width: 150px; /* Tamaño reducido */
+    margin-right: 20px;
+}
+
+.about-content {
+    max-width: calc(100% - 170px); /* Ajuste de tamaño según la imagen */
+}
+
+.about-content p {
+    margin: 0 0 10px;
+}
+
+/* Sección Géneros Musicales */
+.genres-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.genre {
+    flex: 1 1 calc(50% - 20px);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.genre img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.genre h3 {
+    margin-top: 0;
+}
+
+/* Sección Noticias */
+.news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    flex: 1 1 calc(50% - 20px);
+    margin: 20px 0;
+}
+
+.news-item img {
+    max-width: 200px;
+    margin-right: 20px;
+    height: auto;
+    border-radius: 5%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.news-item img:hover {
+    transform: scale(1.3);
+}
+
+.news-content {
+    max-width: calc(100% - 220px);
+}
+
+.news-content h3 {
+    margin-top: 0;
+}
+
+/* Sección Galería */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#gallery .gallery-grid img {
+    transition: transform 0.3s ease-in-out;
+}
+
+#gallery .gallery-grid img:hover {
+    transform: scale(1.3);
+}
+
+/* Sección Recomendaciones */
+.recommendation-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.recommendation {
+    text-align: center;
+    margin: 10px;
+}
+
+.recommendation h3 {
+    margin-top: 0;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(21, 0, 24, 0.644);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Clases Utilitarias */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.icons a img {
+    margin: 5px;
+}

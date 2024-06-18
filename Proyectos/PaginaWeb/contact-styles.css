@@ -1,0 +1,252 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('img/inicio.jpg');
+  background-color: rgba(24, 16, 0, 0.827);
+  rgba(95, 1, 111, 0);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+header {
+  background-color: rgba(21, 0, 24, 0.651);
+  color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+}
+.contact-container {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: rgba(21, 0, 24, 0.827);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container label {
+  margin-bottom: 5px;
+}
+
+.contact-container input,
+.contact-container textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff4081;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-container button:hover {
+  background-color: #e73370;
+}
+
+header .logo h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+header {
+  background-color: rgba(21, 0, 24, 0.233);
+  ;
+  color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+}
+main {
+  padding: 20px;
+  background-color: rgba(99, 0, 112, 0.178);
+  ;
+}
+
+main section {
+  margin-bottom: 40px;
+}
+
+main h2 {
+  border-bottom: 2px solid #ff4081;
+  padding-bottom: 10px;
+}
+
+footer {
+  background-color: rgba(21, 0, 24, 0.034);
+
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li {
+  margin: 0 10px;
+}
+
+footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+.register-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #ff40801e;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(15, 15, 15);
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-container label {
+  margin-bottom: 5px;
+}
+
+.register-container input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.register-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff4081;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-container button:hover {
+  background-color: #e73370;
+}
+
+.register-container .login-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.register-container .login-link a {
+  color: #ff4081;
+  text-decoration: none;
+}
+
+.register-container .login-link a:hover {
+  text-decoration: underline;
+}
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container label {
+  margin-bottom: 5px;
+}
+
+.login-container input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.login-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff4081;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #e73370;
+}
+
+.login-container .register-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-container .register-link a {
+  color: #ff4081;
+  text-decoration: none;
+}
+
+.login-container .register-link a:hover {
+  text-decoration: underline;
+}
