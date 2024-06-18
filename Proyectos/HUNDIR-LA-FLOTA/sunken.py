@@ -1,0 +1,142 @@
+import random
+import string
+
+EMPTY = ""
+
+UNEXPLORED = "⬛"
+WATER = "🟦"
+TOUCHED = "🟧"
+SUNKEN = "🟥"
+
+
+def generate_board(
+    size: int = 10,
+    ships: tuple[tuple[int, int]] = ((5, 1), (4, 1), (3, 2), (2, 1)),
+) -> list[list[str]]:
+    board = [[EMPTY for _ in range(size)] for _ in range(size)]
+    for sheep_size, num_ships in ships:
+        placed_ships = 0
+        while placed_ships < num_ships:
+            sheep_id = f"{sheep_size}{string.ascii_uppercase[placed_ships]}"
+            row, col = random.randint(0, size), random.randint(0, size)
+            step = random.choice((-1, 1))
+            row_step, col_step = (step, 0) if random.randint(0, 1) else (0, step)
+            breadcrumbs = []
+            for _ in range(sheep_size):
+                try:
+                    if not (0 <= row < size and 0 <= col < size):
+                        raise IndexError()
+                    if board[row][col] == EMPTY:
+                        board[row][col] = sheep_id
+                        breadcrumbs.append((row, col))
+                    else:
+                        raise IndexError()
+                    row += row_step
+                    col += col_step
+                except IndexError:
+                    # reset board
+                    for bc in breadcrumbs:
+                        board[bc[0]][bc[1]] = EMPTY
+                    break
+            else:
+                placed_ships += 1
+
+    return board
+
+
+def show_board(board: list[list[str]]) -> None:
+    for row in board:
+        for item in row:
+            print(f"[{item:2s}]", end="")
+        print()
+
+
+# TU CÓDIGO DESDE AQUÍ HACIA ABAJO
+# ↓↓↓↓↓↓↓↓↓
+
+# TABLERO HECHO CON LISTAS DE LISTAS.
+COLUMN = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ROW = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+size = 10
+UNEXPLORED = "⬛"
+board2 = []
+board = generate_board()
+for _ in range(size):
+    row = []
+    for col in range(size):
+        row.append(UNEXPLORED)
+    board2.append(row)
+
+# PARA QUE SE IMPRIMA SIN CARACTERES
+print(" ", end=" ")
+for c in COLUMN:
+    print(c, end=" ")
+print()
+for i, r in enumerate(ROW):
+    print(r, end=" ")
+    print("".join(board2[i]), end="")
+    print("")
+print(board)
+# PRUEBA ------------------------
+touchs = []
+sunkens = []
+coordenada = []
+while True:
+
+    COLUMN = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    ROW = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+
+    question = input(
+        "Introduce la coordenada a la que quieres disparar ej A4: "
+    ).upper()
+
+    letter = ord(question[0]) - 65
+    num = int(question[1:]) - 1
+
+    while letter > 9 or letter < 0 or num > 9 or num < 0:
+        question = input("Intoduzca una coordenada valida: ").upper()
+        letter = ord(question[0]) - 65
+        num = int(question[1:]) - 1
+
+    if board[letter][num] is EMPTY and question not in coordenada:
+        board2[letter][num] = WATER
+        print(" ", end=" ")
+        for c in COLUMN:
+            print(c, end=" ")
+        print()
+        for i, r in enumerate(ROW):
+            print(r, end=" ")
+            print("".join(board2[i]), end="")
+            print("")
+        coordenada.append(question)
+    elif board[letter][num] is not EMPTY and question not in coordenada:
+        
+        target_board = board[letter][num]
+        touchs.append(board[letter][num])
+        length = int(target_board[0])
+        board2[letter][num] = TOUCHED
+        
+        for i, listas in enumerate(board):
+            for j, elemento in enumerate(listas):
+                if board[i][j] == target_board and touchs.count(target_board) == length:
+                    board2[i][j] = SUNKEN
+        print(" ", end=" ")
+        for c in COLUMN:
+            print(c, end=" ")
+        print()
+        for i, r in enumerate(ROW):
+            print(r, end=" ")
+            print("".join(board2[i]), end="")
+            print("")
+        coordenada.append(question)
+        print(coordenada)
+    else:
+        print(" ", end=" ")
+        for c in COLUMN:
+            print(c, end=" ")
+        print()
+        for i, r in enumerate(ROW):
+            print(r, end=" ")
+            print("".join(board2[i]), end="")
+            print("")
+        print("Esa coordenada ya fue utilizada")
