@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulario de Datos Personales</title>
+</head>
+<body>
+    <h3>Formulario de Datos Personales</h3>
+    <form action="procesa.php" method="post">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required /><br />
+            <label>Sexo:</label><br />
+            <input type="radio" id="hombre" name="sexo" value="hombre" checked="checked" />
+            <label for="hombre">Hombre</label><br />
+            <input type="radio" id="mujer" name="sexo" value="mujer" />
+            <label for="mujer">Mujer</label><br />
+        </fieldset>
+        <fieldset>
+            <legend>Datos del vehículo</legend>
+            <label for="marca_modelo">Marca/Modelo:</label>
+            <input type="text" id="marca_modelo" name="marca_modelo" /><br />
+            <label for="matricula">Matrícula:</label>
+            <input type="text" id="matricula" name="matricula" /><br/><br/>
+            <label>Seleccione las características:</label>
+            <select multiple size="5" name="caracteristicas[]">
+                <option value="1">Utilitario</option>
+                <option value="1">Todo Terreno</option>
+                <option value="1">Alta Gama</option>
+                </select>
+        </fieldset>
+        <fieldset>
+            <legend>Otros Datos</legend>
+            <label>Seleccione otros datos:</label><br />
+            <input type="checkbox" id="servofrenos" name="otros[]" value="servofrenos" checked="checked" />
+            <label for="servofrenos">Servofrenos</label><br />
+            <input type="checkbox" id="elevalunas" name="otros[]" value="elevalunas" checked="checked" />
+            <label for="elevalunas">Elevalunas</label><br />
+            <input type="checkbox" id="remolque" name="otros[]" value="remolque" checked="checked" />
+            <label for="remolque">Remolque</label><br />
+        </fieldset>
+        <input type="submit" value="Enviar" />
+    </form>
+</body>
+</html>
+</html>

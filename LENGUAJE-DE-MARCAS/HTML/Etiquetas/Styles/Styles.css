@@ -1,0 +1,49 @@
+header {
+    background-color:black ;
+    color: aliceblue;
+    text-align: center;
+    height: 80px;
+    margin: auto;
+   text-justify:auto;
+
+}
+
+
+.titulo{
+    background-color: rgb(7, 29, 104);
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:aquamarine ;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.b,.b2{
+    background-color: lightblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-style: solid ;
+    border-color: violet;
+    float: none;
+}
+
+header, nav , main , aside , footer {
+width: 300px;
+height: 100px;
+border-style: solid;
+float: left;
+}
+.nav1{
+    margin-left: auto;
+    margin: auto;
+    background-color: beige;
+}
+
+.as1{
+    background-color: orange ;
+    margin: auto;
+
+}
+.foot{
+    color: white;
+    background-color: violet;
+}
